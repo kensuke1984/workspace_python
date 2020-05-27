@@ -1,5 +1,5 @@
+from typing import List
 from pathlib import Path
-from matplotlib import pyplot as plt
 
 root = Path('D:/Documents/share/western_pacific/prem_spc/spcsac')
 
@@ -8,8 +8,6 @@ def get_events() -> list:
     import re
     return [i for i in root.glob('*') if re.search('\\d+[A-Z]', str(i))]
 
-
-from typing import List
 
 
 def get_transverse(event) -> List[str]:

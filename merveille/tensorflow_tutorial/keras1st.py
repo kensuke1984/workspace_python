@@ -1,4 +1,3 @@
-# from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
 
 from tensorflow import keras
@@ -55,9 +54,11 @@ def plot_image(i, predictions_array, true_label, img):
     if predicted_label == true_label:
         color = 'blue'
     else:
-        color='red'
+        color = 'red'
 
-    plt.xlabel("{} {:2.0f}% ({})".format(class_names[predicted_label],100*np.max(predictions_array),class_names[true_label],color=color))
+    plt.xlabel("{} {:2.0f}% ({})".format(class_names[predicted_label], 100 * np.max(predictions_array),
+                                         class_names[true_label], color=color))
 
-plot_image(0,predictions,test_labels,test_images)
+
+plot_image(0, predictions, test_labels, test_images)
 plt.show()
